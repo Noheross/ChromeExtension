@@ -1,0 +1,15 @@
+{
+        "manifest_version": 2,
+        "name": "ChromeExtent",
+        "version": "1.0.0",
+        "background": {
+                "scripts": ["js/bg.js"]
+        },
+        "permissions": ["contextMenus"],
+        "content_scripts":[{
+                "matches": ["http://*/*", "https://*/*"],
+                "js": ["js/content.js","js/jquery.js"],
+                "run_at": "document_start"
+        }]
+
+}
